@@ -1,15 +1,17 @@
 package com.ahmet;
 
-import org.apache.zookeeper.*;
+import org.apache.zookeeper.KeeperException;
+import org.apache.zookeeper.WatchedEvent;
+import org.apache.zookeeper.Watcher;
+import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 
-public class WatcherDemo implements Watcher {
+public class TargetZnodeWatcher implements Watcher {
 
     private static final String ZOOKEEPER_ADDRESS = "localhost:2181";
     private static final String TARGET_ZNODE = "/target_znode";
@@ -17,10 +19,10 @@ public class WatcherDemo implements Watcher {
     private ZooKeeper zooKeeper;
     private static Logger logger;
 
-    public static void main(String[] args) throws IOException, InterruptedException, KeeperException {
-        logger = LoggerFactory.getLogger(WatcherDemo.class);
+    public static void main(String[] args) throws IOException, InterruptedException {
+        logger = LoggerFactory.getLogger(TargetZnodeWatcher.class);
 
-        WatcherDemo election = new WatcherDemo();
+        TargetZnodeWatcher election = new TargetZnodeWatcher();
         election.connectToZookeeper();
         election.run();
         election.close();
@@ -69,25 +71,10 @@ public class WatcherDemo implements Watcher {
                     }
                 }
             }
-            case NodeCreated -> {
-                logger.warn(TARGET_ZNODE + " was created");
-            }
-            case NodeDeleted -> {
-                logger.warn(TARGET_ZNODE + " was deleted");
-            }
-            case NodeDataChanged -> {
-                logger.warn(TARGET_ZNODE + " data changed");
-
-            }
-            case NodeChildrenChanged -> {
-                logger.warn(TARGET_ZNODE + " children changed");
-            }
-//            case DataWatchRemoved -> {
-//            }
-//            case ChildWatchRemoved -> {
-//            }
-//            case PersistentWatchRemoved -> {
-//            }
+            case NodeCreated -> logger.warn(TARGET_ZNODE + " was created");
+            case NodeDeleted -> logger.warn(TARGET_ZNODE + " was deleted");
+            case NodeDataChanged -> logger.warn(TARGET_ZNODE + " data changed");
+            case NodeChildrenChanged -> logger.warn(TARGET_ZNODE + " children changed");
         }
 
         // Re-register after watches triggered:

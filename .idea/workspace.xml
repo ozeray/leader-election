@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6285cda3-76b1-4e81-bfa3-f0b4ae458d0a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ahmet/LeaderElection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ahmet/LeaderReelection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ahmet/WatcherDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
+    <list default="true" id="6285cda3-76b1-4e81-bfa3-f0b4ae458d0a" name="Changes" comment="...">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ahmet/WatcherDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ahmet/TargetZnodeWatcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +25,18 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ahmet/LeaderElection.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/ahmet/LeaderReelection.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
@@ -59,7 +63,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "20",
-    "last_opened_file_path": "D:/Software/DistributedSystemsAndCloudComputingWithJava/leader-election",
+    "last_opened_file_path": "D:/Software/MasterMicroservicesWithJavaSpringDockerKubernetes",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,7 +72,7 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.20605469",
     "project.structure.side.proportion": "0.3055286",
-    "settings.editor.selected.configurable": "project.propCompiler",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -80,7 +84,7 @@
       <recent name="com.ahmet" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.WatcherDemo">
+  <component name="RunManager" selected="Application.TargetZnodeWatcher">
     <configuration name="LeaderElection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ahmet.LeaderElection" />
       <module name="leader-election" />
@@ -94,8 +98,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WatcherDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ahmet.WatcherDemo" />
+    <configuration name="TargetZnodeWatcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ahmet.TargetZnodeWatcher" />
       <module name="leader-election" />
       <extension name="coverage">
         <pattern>
@@ -109,7 +113,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WatcherDemo" />
+        <item itemvalue="Application.TargetZnodeWatcher" />
         <item itemvalue="Application.LeaderElection" />
       </list>
     </recent_temporary>
@@ -124,8 +128,20 @@
       <updated>1694694453456</updated>
       <workItem from="1694694454620" duration="2659000" />
       <workItem from="1694697203747" duration="19686000" />
-      <workItem from="1694815666108" duration="840000" />
+      <workItem from="1694815666108" duration="2735000" />
+      <workItem from="1694874466005" duration="69000" />
+      <workItem from="1694874553574" duration="1231000" />
+      <workItem from="1694891905916" duration="3436000" />
     </task>
+    <task id="LOCAL-00001" summary="...">
+      <option name="closed" value="true" />
+      <created>1694819784477</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694819784477</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,6 +149,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="..." />
+    <option name="LAST_COMMIT_MESSAGE" value="..." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
